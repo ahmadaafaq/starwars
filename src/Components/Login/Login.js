@@ -16,6 +16,7 @@ function Login() {
         const userElem = document.querySelector('input[name=username]');
         const passElem = document.querySelector('input[name=password]');
         if (userElem.value && passElem.value) {
+            setStartLogin(true);
             setCredentials({
                 username: userElem.value,
                 password: passElem.value
@@ -57,7 +58,7 @@ function Login() {
                             height={20}
                             width={100}
                         /> :
-                            <button className='loginBtn' onClick={() => { setUser(); setStartLogin(true) }}>Login</button>
+                            <button className='loginBtn' onClick={() => setUser()}>Login</button>
                         }
                     </div>
                 </section>
